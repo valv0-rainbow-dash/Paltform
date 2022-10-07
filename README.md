@@ -1,25 +1,23 @@
-# Advanced P5.js Platformer Engine
+# Paltform
 
-Set up your next platformer in just a little bit of code, with advanced physics, collisions, wall-climb, and so much more.  Navigate into the `docs` folder on how to start building your next amazing platformer!
+Paltform is a html and js platform game. 
 
-To be able to get a solid understanding of how this template works, you'll need a basic understanding of javascript, [p5.js](https://p5js.org/), and [matter.js](https://brm.io/matter-js/).
+## actual version: 0.1a
 
-Let's get started.
+## Usage
 
----
+You can test the game [here](https://UnusualPaltformGame.valv0fluttershy.repl.co).
 
-**1. Configuring the environment** - `docs/config.md`
+## Changelog:
 
-**2. Understanding The Base Variables** - `docs/vars.md`
+### v0.1a
+- Initial publish
 
-**3. Understanding Matter.js Bodies** - `docs/bodies.md`
 
-**4. Creating Levels** - `docs/levels.md`
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-**5. Customizing the Player** - `docs/player.md`
+Please make sure to update tests as appropriate.
 
-**6. Customizing & Creating Blocks** - `docs/blocks.md`
-
----
-
-Alternatively, just open up the `docs` folder and start reading.
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
