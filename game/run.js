@@ -44,7 +44,7 @@ function draw() {
     background(200);
     textFont("Impact", 25);
     textAlign(CENTER, CENTER);
-    text("Paltform version 0.1a\n\nWASD/Flèches - Bouger\nEspace/W/Flèche Haut - Sauter/Walljump\nSHIFT + Mouvement - faire un dash\n\nClique ici pour commencer", width/2, height/2);
+    text("Paltform version 0.1.4a\n\nWASD/Flèches - Bouger\nEspace/W/Flèche Haut - Sauter/Walljump\nSHIFT + Mouvement - faire un dash\n\nClique ici pour commencer", width/2, height/2);
     if(mouseIsPressed){
       scene = "game";
     }
