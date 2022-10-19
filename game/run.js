@@ -44,7 +44,7 @@ function draw() {
     background(200);
     textFont("Impact", 25);
     textAlign(CENTER, CENTER);
-    text("Paltform version 0.1.4a\n\nWASD/Flèches - Bouger\nEspace/W/Flèche Haut - Sauter/Walljump\nSHIFT + Mouvement - faire un dash\n\nClique ici pour commencer", width/2, height/2);
+    text("Paltform version 0.1.5a\nThe game is still in devloppement. Some levels can be in debug mode\n\nWASD/Flèches - Bouger\nEspace/W/Flèche Haut - Sauter/Walljump\nSHIFT + Mouvement - faire un dash\n\nClique ici pour commencer\nThe game is still in franch, sorry.", width/2, height/2);
     if(mouseIsPressed){
       scene = "game";
     }
@@ -110,3 +110,32 @@ function keyPressed() {
 function keyReleased() {
   keys[key] = false;
 }
+
+window.requestAnimFrame = (function() {
+    return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.ieRequestAnimationFrame ||
+        function(callback) {
+            window.setTimeout(callback, 1000 / 60);
+        };
+})();
+
+let fpsElement = document.getElementById("fps");
+
+let then = Date.now() / 1000;  // get time in seconds
+
+let render = function() {
+    let now = Date.now() / 1000;  // get time in seconds
+
+    // compute time since last frame
+    let elapsedTime = now - then;
+    then = now;
+
+    // compute fps
+    let fps = 1 / elapsedTime;
+    fpsElement.innerText = fps.toFixed(2);
+
+    requestAnimFrame(render);
+};
+render();
