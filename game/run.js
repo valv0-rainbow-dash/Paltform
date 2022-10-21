@@ -21,7 +21,7 @@ const configLevel = () => {
 }
 
 function setup() {
-  createCanvas(800, 400);
+  createCanvas(1080, 720);
   angleMode(RADIANS);
   rectMode(CENTER);
   noStroke();
@@ -44,7 +44,7 @@ function draw() {
     background(200);
     textFont("Impact", 25);
     textAlign(CENTER, CENTER);
-    text("Paltform version 0.1.5a\nThe game is still in devloppement. Some levels can be in debug mode\n\nWASD/Flèches - Bouger\nEspace/W/Flèche Haut - Sauter/Walljump\nSHIFT + Mouvement - faire un dash\n\nClique ici pour commencer\nThe game is still in franch, sorry.", width/2, height/2);
+    text("Paltform version 0.1.6a\nThe game is still in devloppement. Some levels can be in debug mode\n\nWASD/Arrow - Move\nSpace/W/Up arrow - Jump/Walljump\nSHIFT + Mouvement - make a dash\n\nClick here to begin.", width/2, height/2);
     if(mouseIsPressed){
       scene = "game";
     }
@@ -100,7 +100,7 @@ function draw() {
     textFont("Impact", 25);
     textAlign(CENTER, CENTER);
     fill(0);
-    text("Vous avez gagné(e)!", width/2, height/2);
+    text("You win!", width/2, height/2);
   }
 }
 
