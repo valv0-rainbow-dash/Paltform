@@ -44,7 +44,7 @@ function draw() {
     background(200);
     textFont("Impact", 25);
     textAlign(CENTER, CENTER);
-    text("Paltform version 0.1.6a\nThe game is still in devloppement. Some levels can be in debug mode\n\nWASD/Arrow - Move\nSpace/W/Up arrow - Jump/Walljump\nSHIFT + Mouvement - make a dash\n\nClick here to begin.", width/2, height/2);
+    text("Paltform version 0.1.7a\nThe game is still in devloppement. Some levels can be in debug mode\n\nWASD/Arrow - Move\nSpace/W/Up arrow - Jump/Walljump\nSHIFT + Mouvement - make a dash\n\nClick here to begin.", width/2, height/2);
     if(mouseIsPressed){
       scene = "game";
     }
@@ -139,3 +139,4 @@ let render = function() {
     requestAnimFrame(render);
 };
 render();
+
