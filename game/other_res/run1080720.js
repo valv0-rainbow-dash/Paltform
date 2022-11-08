@@ -21,7 +21,7 @@ const configLevel = () => {
 }
 
 function setup() {
-  createCanvas(720, 360);
+  createCanvas(1080, 720);
   angleMode(RADIANS);
   rectMode(CENTER);
   noStroke();

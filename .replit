@@ -176,3 +176,7 @@ pattern = "**/{*.less,*.scss,*.css}"
       unknownVendorSpecificProperties = "ignore" # Unknown vendor specific property.
       vendorPrefix = "warning" # When using a vendor-specific prefix also include the standard property
       zeroUnits = "ignore" # No unit for zero needed"
+
+[auth]
+pageEnabled = false
+buttonEnabled = true
