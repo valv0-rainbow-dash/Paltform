@@ -12,6 +12,8 @@ the game is the same version for both player and devlopper. You can see new leve
 
 ## Changelog:
 
+### CHANGELOGS ARE MOVING TO THE MAIN PAGE!!
+
 ### v0.1.4a
 - adding first levels of the Glitchy world
   - a completly gliched world.
