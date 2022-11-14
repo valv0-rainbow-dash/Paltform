@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Paltform - 0.1.7a - 720x360</title>
+  <title>Paltform - main page</title>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link href="/menu.css" rel="stylesheet" type="text/css" />
 
@@ -16,8 +16,14 @@
   
 </head>
 <body>
+  <div class="title">
 <h1>Welcome on Paltform!</h1>
-  <h2>Please choose your resolution to play the game!</h2>
+
+
+    <div id="typing">please choose your <span>resolution</span></div> <div id="crow">|</div>
+
+    
+  </div>
 <nav>
   <ul>
     <li><a href="/resolutions/720360.html">720 x 360</a></li>
@@ -28,17 +34,30 @@
 </nav>
 
 <div class="conteneur">
-  <h1>Paltform</h1>
   <h2>actual version :0.1.7.1a</h2>
   <h3>Changelog</h3>
   <h4>0.1.7.1a :</h4>
   <p>  - Add a new menu for the game.</p>
   <p>  - Add a new menu for the credits.</p>
   <p>  - Get rid of the ugly button ingame.</p>
+  <p>  - Add a HARDCORE mod!</p>
+  <p>  - </p>
   <h4>0.1.6a</h4>
   <p>  - Add Frame Per Second.</p>
 </div>
   
 </body>
 
+
 </html>
+
+
+  <script>
+const myList = ["100% Jquery free", "May contain bugs", "A really good platformer", "Also try flappy bird", "Arktout9", "That rectangle is a spy", "Noted 21/20 on ThatOneGreenNSFWsite"];
+
+randomizeFunction()
+
+function randomizeFunction() {
+    document.getElementById("randomWord").innerHTML = myList[Math.floor(Math.random() * myList.length)]
+}
+</script>

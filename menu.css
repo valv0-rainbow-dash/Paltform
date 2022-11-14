@@ -7,8 +7,8 @@
 
 nav{
     width: 100%;
-    margin: 0px auto 40px auto;
-    background-color: white;
+    margin: 10px auto 40px auto;
+    background-color: #bababa;
     position: sticky;
     top: 0px;
 }
@@ -43,12 +43,77 @@ nav a:hover{
     border-bottom: 2px solid gold;
 }
 
-.conteneur{
+.title{
   margin: 0px 20px;
-  height: 1500px;
+  height: 400px;
+  /*background-image: url("/assets/bg.png");*/
+  
+}
+
+.contener{
+
 }
 
 h1 {
 font-family: Verdana, sans-serif;
 color: #CE5937;
+text-align: center;
+margin: 0px;
+padding: 0px;
+}
+
+h2 {
+  font-family: Verdana, sans-serif;
+  color: #683222;
+  text-align: center;
+  margin: 10px;
+  padding: 0px;
+}
+
+/*typing animation*/
+#typing {
+  
+ width: 0ch;
+ color: #4d4c4c;
+ float: left;
+ font-family: sans-serif;
+ font-weight:bold;
+ font-size: 50px;
+ margin-top: 20%;
+ margin-left: 20%;
+ overflow: hidden;
+ white-space: nowrap;
+ animation: typing 5s steps(22) 1s infinite alternate;
+ }
+
+#typing span{
+ color:rgb(79, 255, 35);}
+
+#crow {
+ float: left;
+ margin-top: 20%;
+ color: rgb(79, 255, 35);
+ font-family: consolas;
+ font-weight:bold;
+ font-size: 50px;
+ animation: crow 0.5s linear 0s infinite;
+ }
+
+@keyframes typing {
+  from {
+      width: 0ch;
+	}
+   to {
+      width: 28ch;
+	 }
+}
+
+@keyframes crow {
+   from {
+	 opacity: 0;
+	 }
+
+    to {
+	 opacity: 1;
+	 }
 }
