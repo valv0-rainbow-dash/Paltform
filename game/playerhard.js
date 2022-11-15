@@ -58,19 +58,20 @@ class Player extends Body {
     //this.angleCollisions.some(x => x === 0)
 
     // Moving Right
+    
     if (keys["ArrowRight"] || keys["d"]) {
       if(this.speed < config.player.speed) this.speed += config.player.acceleration;
       else this.speed += (config.player.speed - this.speed) / config.player.decceleration/5
       this.emit("move.left", this);
     }
-
+/*
     // Moving Left
     if (keys["ArrowLeft"] || keys["a"]) {
       if(this.speed > -config.player.speed) this.speed -= config.player.acceleration;
       else this.speed += (-config.player.speed - this.speed) / config.player.decceleration/5
       this.emit("move.right", this);
     }
-
+*/
     // If not moving right or left, slow down
     if(!keys["ArrowRight"] && !keys["ArrowLeft"] && !keys["a"] && !keys["d"]){
       this.speed += -this.speed/config.player.decceleration;

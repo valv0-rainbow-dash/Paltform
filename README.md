@@ -1,5 +1,7 @@
 # Paltform
 
+![alt-text](https://i.imgur.com/hrfgoIn.png)
+
 Paltform is a html and js platform game. 
 
 ## actual version: 0.1.4a

@@ -1,45 +1,54 @@
-<HTML>
-<HEAD>
-<TITLE>Connexion à 'Nom de votre site'</TITLE>
-<SCRIPT LANGUAGE="JavaScript">
-function Login(){
-var done=0;
-var username=document.login.username.value;
-var password=document.login.password.value;
-
-if (username=="DevTest" && password=="wolfyxmelilol" {
-window.location="userpage/user1.html";
-}
-
-if (username=="user2" && password=="user2") {
-window.location="user2.html";
-}
-
-if (username=="user3" && password=="user3") {
-window.location="user3.html";
-}
-
-if (username=="user4" && password=="user4") {
-window.location="user4.html";
-}
-
-if (username=="vous" && password=="vous") { 
-// Vous pouvez réservez une page pour vous même(options, etc.)
-window.location="vous.html";
-}
-}
-</SCRIPT>
-<BODY>
-<CENTER>
-<FORM name=login>
-<TABLE width=225 border=1 cellpadding=3>
-<tr><td colspan=2><CENTER><FONT
-size="+2"><b>Connexion</b></FONT></CENTER></td></tr>
-<tr><td>Pseudo:</td><td><input type=text name=username></td></tr>
-<tr><td>Mot de passe:</td><td><input type=PASSWORD name=password></td></tr>
-<tr><td colspan=2 align=center><input type=button value="Connextion!" onClick="Login()"></td></tr>
-</TABLE>
-</FORM>
-</CENTER>
-</BODY>
-</HTML>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0" />
+    <title>Darkmode test</title>
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+      .light-mode {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Platform test</h1>
+  
+    <p>
+test for a dark theme mode
+    </p>
+  
+    <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20200122115631/GeeksforGeeks210.png"/>
+  
+    <h3 id="DarkModetext">Dark Mode is OFF</h3>
+    <button onclick="darkMode()">Darkmode</button>
+    <button onclick="lightMode()">LightMode</button>
+    <script>
+      function darkMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+        content.innerText = "Dark Mode is ON";
+      }
+      function lightMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerText = "Dark Mode is OFF";
+      }
+    </script>
+  </body>
+</html>

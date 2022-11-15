@@ -2,13 +2,13 @@
 <html>
 
 <head>
-   <meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Paltform - main page</title>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link href="/menu.css" rel="stylesheet" type="text/css" />
 
-  <meta content="Paltform game - alpha version" property="og:title" />
+    <meta content="Paltform game - alpha version" property="og:title" />
     <meta content="Paltform is a platform game online created by Valv0 rainbowdash and betawolfy." property="og:description" />
     <meta content="https://UnusualPaltformGame.valv0fluttershy.repl.co" property="og:url" />
     <meta content="https://i.imgur.com/bSKl1zo.png" property="og:image" />
@@ -20,7 +20,7 @@
 <h1>Welcome on Paltform!</h1>
 
 
-    <div id="typing">please choose your <span>resolution</span></div> <div id="crow">|</div>
+    <div id="typing">Please choose your <span>resolution</span></div> <div id="crow">|</div>
 
     
   </div>
@@ -28,14 +28,28 @@
   <ul>
     <li><a href="/resolutions/720360.html">720 x 360</a></li>
     <li><a href="/resolutions/1080720.html">1080 x 720</a></li>
-    <li><a href="/resolutions/1080720hard.html">HARDCORE!!!!!</a></li>
+    <li><a href="/soon.html">(come back soon)</a></li>
     <li><a href="/credit.html">Crédit</a></li>
+    <li><a href="/test.html">testpage</a></li>
   </ul>
 </nav>
+        <h3 id="DarkModetext">Dark Mode is OFF</h3>
+    <button onclick="darkMode()">Darkmode</button>
+    <button onclick="lightMode()">LightMode</button>
 
 <div class="conteneur">
-  <h2>actual version :0.1.7.1a</h2>
+  <h2>actual version :0.1.8a</h2>
+  <h2 id="randomWord"></h2>
   <h3>Changelog</h3>
+<h4>0.1.8a</h4>
+  <p>  - Add a dark mode and button to toggle between the two mode.</p>
+  <p>  - Add a light mode and button to toggle between the two mode.</p>
+  <p>  - Add the test page directly on the main page.</p>
+  <p>    - Add a new test page.</p>
+  <p>  - Remove all cookie.</p>
+  <p>  - Add a random splashtest under the actual version number</p>
+  <p>I decided to remove the hardcore mod for the moment due to some bugs.</p>
+  
   <h4>0.1.7.1a :</h4>
   <p>  - Add a new menu for the game.</p>
   <p>  - Add a new menu for the credits.</p>
@@ -60,4 +74,20 @@ randomizeFunction()
 function randomizeFunction() {
     document.getElementById("randomWord").innerHTML = myList[Math.floor(Math.random() * myList.length)]
 }
+
 </script>
+
+    <script>
+      function darkMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+        content.innerText = "Dark Mode is ON";
+      }
+      function lightMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerText = "Dark Mode is OFF";
+      }
+    </script>
