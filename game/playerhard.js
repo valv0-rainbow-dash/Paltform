@@ -1,3 +1,10 @@
+var number = 0;
+
+function plusOne(count) {
+  number++;
+  count.textContent = number.toString();
+}
+
 class Player extends Body {
   constructor(body) {
     super(body, "player");
@@ -39,7 +46,7 @@ class Player extends Body {
     
 
     // Set the player's inertia to infinity so that it stays upright and doesn't rotate to external forces
-    //bd.setInertia(this.body, Infinity);
+    bd.setInertia(this.body, 10000);
     
     // Sensors for touching blocks
     this.sensors = {
@@ -51,7 +58,7 @@ class Player extends Body {
 
       // Is the player touching a block on the right?
       
-      right: supports.filter(s => Math.round(s.y) !== Math.round(this.body.position.y + config.player.height / 2)).some(s => Math.round(s.x) === Math.round(player.body.position.x + config.player.width / 2))
+      right: supports.filter(s => Math.round(s.y) !== Math.round(this.body.position.y + config.player.height / 4)).some(s => Math.round(s.x) === Math.round(player.body.position.x + config.player.width / 4))
     
     }
     //this.angleCollisions.some(x => x === 180)
@@ -64,14 +71,14 @@ class Player extends Body {
       else this.speed += (config.player.speed - this.speed) / config.player.decceleration/5
       this.emit("move.left", this);
     }
-/*
+
     // Moving Left
     if (keys["ArrowLeft"] || keys["a"]) {
       if(this.speed > -config.player.speed) this.speed -= config.player.acceleration;
       else this.speed += (-config.player.speed - this.speed) / config.player.decceleration/5
       this.emit("move.right", this);
     }
-*/
+
     // If not moving right or left, slow down
     if(!keys["ArrowRight"] && !keys["ArrowLeft"] && !keys["a"] && !keys["d"]){
       this.speed += -this.speed/config.player.decceleration;
@@ -174,10 +181,11 @@ class Player extends Body {
 
     // Dying
     if(this.body.position.y > (levels[level].bitmap.length * config.world.blockSize) + 500) {
+      plusOne(count)
       this.died = true;
+}
     }
   }
-}
 
 const configPlayerEvents = () => {
   player.on("update", () => {

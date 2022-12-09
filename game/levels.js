@@ -42,15 +42,15 @@ const levels = [
       " ",
       "0"
     ],
-    message: "Wall-jumping 101"
+    message: "Wall-jumping"
   },
   {
     bitmap: [
       "00000",
       "    0",
-      "    0",
-      "    0",
-      "@   0",
+      "    ",
+      "    ",
+      "@   ",
       "00000",
       "                                         +",
       "                                       <000>",
@@ -93,7 +93,8 @@ const levels = [
       "  0 00 0  0  0 00 0",
       "  0 00 0  0  0 00 0",
       "  0 00 0  0  0 00 0",
-      "      +"
+      "     0+0",
+      "     000",
     ],
     message: "Make your choices"
   },
@@ -204,6 +205,8 @@ const levels = [
       "     <0000000>      <0000000>     <0000000000000000                                                                              +  ",
   
      ],
-    message : "die..."
+    message : ""
   },
+
+  
 ]

@@ -1,54 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" 
-          content="width=device-width, initial-scale=1.0" />
-    <title>Darkmode test</title>
-    <style>
-      body {
-        padding: 25px;
-        background-color: white;
-        color: black;
-        font-size: 25px;
-      }
-      .dark-mode {
-        background-color: black;
-        color: white;
-      }
-      .light-mode {
-        background-color: white;
-        color: black;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Platform test</h1>
+<html>
+<head>
+<style>
+form * {
+  display: block;
+  margin: 10px;
+}
+</style>
+<script language="Javascript" >
+function download() {
+  var filename = window.document.myform.docname.value;
+  var name =  window.document.myform.name.value;
+  var text =  window.document.myform.text.value;
+  var problem =  window.document.myform.problem.value;
   
-    <p>
-test for a dark theme mode
-    </p>
+  var pom = document.createElement('a');
+  pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
+    "Your Name: " + encodeURIComponent(name) + "\n\n" +
+    "Problem: " + encodeURIComponent(problem) + "\n\n" +
+    encodeURIComponent(text)); 
+
+  pom.setAttribute('download', filename);
+
+  pom.style.display = 'none';
+  document.body.appendChild(pom);
+
+  pom.click();
+
+  document.body.removeChild(pom);
+}
+</script>
+</head>
+<body>
+<form name="myform" method="post" >
+  <input type="text" id="docname" value="test.txt" />
+  <input type="text" id="name" placeholder="Your Name" />
+  <div style="display:unblock">
+    Option 1 <input type="radio" value="Option 1" onclick="getElementById('problem').value=this.value; getElementById('problem').show()" style="display:inline" />
+    Option 2 <input type="radio" value="Option 2" onclick="getElementById('problem').value=this.value;" style="display:inline" />
+    <input type="text" id="problem" />
+  </div>
+  <textarea rows=3 cols=50 id="text" />Please type in this box. 
+When you click the Download button, the contents of this box will be downloaded to your machine at the location you specify. Pretty nifty. </textarea>
   
-    <img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20200122115631/GeeksforGeeks210.png"/>
+  <input id="download_btn" type="submit" class="btn" style="width: 125px" onClick="download();" />
   
-    <h3 id="DarkModetext">Dark Mode is OFF</h3>
-    <button onclick="darkMode()">Darkmode</button>
-    <button onclick="lightMode()">LightMode</button>
-    <script>
-      function darkMode() {
-        var element = document.body;
-        var content = document.getElementById("DarkModetext");
-        element.className = "dark-mode";
-        content.innerText = "Dark Mode is ON";
-      }
-      function lightMode() {
-        var element = document.body;
-        var content = document.getElementById("DarkModetext");
-        element.className = "light-mode";
-        content.innerText = "Dark Mode is OFF";
-      }
-    </script>
-  </body>
+</form>
+</body>
 </html>

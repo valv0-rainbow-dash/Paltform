@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Paltform - 720x360</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paltform - tutorial</title>
   <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
   <link href="../style.css" rel="stylesheet" type="text/css" />
   <div>fps:<span id="fps"></span></div>
+  <p>death count<span id="count">0</span></p>
   
     <meta content="Paltform game - alpha version" property="og:title" />
     <meta content="Paltform is a platform game online created by Valv0 rainbowdash and betawolfy." property="og:description" />
@@ -44,7 +45,7 @@
 		Paltform
 	</h1>
 
-  <h2>resolution: 720x360 </h2>
+  <h2>resolution: 1080x720 </h2>
 	
 	<h3>Vertical Menu</h3>
 
@@ -52,6 +53,7 @@
 		<a href="../credit.html">Crédit</a>
 		<a href="../test.html">Test page </a>
     <a href="https://paltform.valv0fluttershy.repl.co/">Game</a>
+    <button onClick="window.location.reload();">Refresh Page</button>
 	</div>
 
 
@@ -67,13 +69,13 @@
   <script src="../game/audio.js"></script>
   <script src="../game/config.js"></script>
   <script src="../game/core.js"></script>
-  <script src="../game/levels.js"></script>
+  <script src="../game/levelstuto.js"></script>
   <script src="../game/body.js"></script>
-  <script src="../game/player.js"></script>
+  <script src="../game/playertuto.js"></script>
   <script src="../game/block.js"></script>
-  <script src="../game/other_res/run720360.js"></script>
+  <script src="../game/other_res/runtutorial.js"></script>
 
-  <div>Seconds: <span id="time">0</span></div>
+          <div>Seconds: <span id="time">0</span></div>
         <input type="button" id="startTimer" value="Start Timer" onclick="start();"><br/>
         <input type="button" id="stopTimer" value="Stop Timer"  onclick="stop();"><br/>
         <input type="button" id="resetTimer" value="Reset Timer"  onclick="reset();"><br/>
@@ -105,7 +107,9 @@
             }
         </script>
   
-  
 </body>
+
+
+
 
 </html>

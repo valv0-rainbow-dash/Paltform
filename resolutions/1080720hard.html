@@ -4,10 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Paltform - 0.1.7a - HARDCORE</title>
+  <title>Paltform - HARDCORE</title>
   <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
   <link href="../style.css" rel="stylesheet" type="text/css" />
   <div>fps:<span id="fps"></span></div>
+<div>
+<span id="count">0</span>
+</div>
   
     <meta content="Paltform game - alpha version" property="og:title" />
     <meta content="Paltform is a platform game online created by Valv0 rainbowdash and betawolfy." property="og:description" />
@@ -51,7 +54,7 @@
 	<div class="vertical-menu">
 		<a href="../credit.html">Crédit</a>
 		<a href="../test.html">Test page </a>
-    <a href="https://unusualpaltformgame.valv0fluttershy.repl.co/">Game</a>
+    <a href="https://paltform.valv0fluttershy.repl.co/">Game</a>
 	</div>
 
 
@@ -65,7 +68,7 @@
   <script src="../libraries/matter.min.js"></script>
   <script src="../libraries/p5.min.js"></script>
   <script src="../game/audio.js"></script>
-  <script src="../game/config.js"></script>
+  <script src="../game/confighard.js"></script>
   <script src="../game/core.js"></script>
   <script src="../game/levels.js"></script>
   <script src="../game/body.js"></script>
@@ -73,7 +76,39 @@
   <script src="../game/block.js"></script>
   <script src="../game/other_res/run1080720hard.js"></script>
   
-  
+  <div>Seconds: <span id="time">0</span></div>
+        <input type="button" id="startTimer" value="Start Timer" onclick="start();"><br/>
+        <input type="button" id="stopTimer" value="Stop Timer"  onclick="stop();"><br/>
+        <input type="button" id="resetTimer" value="Reset Timer"  onclick="reset();"><br/>
+        <script>
+            var timeElapsed = 0;
+            var timerID = -1;
+            function tick() {
+                timeElapsed++
+                document.getElementById("time").innerHTML = timeElapsed;
+            }
+
+            function start() {
+                if(timerID == -1){
+                    timerID = setInterval(tick, 1000);
+                }
+            }
+
+            function stop() {
+                if(timerID != -1){
+                    clearInterval(timerID)
+                    timerID = -1
+                }
+            }
+
+            function reset() {
+                stop();
+                timeElapsed = -1;
+                tick()
+            }
+        </script>
 </body>
+
+  
 
 </html>

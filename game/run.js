@@ -1,3 +1,10 @@
+var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+var myScore;
+
+db.transaction(function (tx) {   
+   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)'); 
+});
+
 const configLevel = () => {
   textFade = 255;
   World.clear(engine.world);
@@ -152,3 +159,26 @@ let render = function() {
 };
 render();
 
+myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+
+function component(width, height, color, x, y, type) {
+  this.type = type;
+  this.width = width;
+  this.height = height;
+  this.speedX = 0;
+  this.speedY = 0;
+  this.x = x;
+  this.y = y;
+  this.update = function() {
+    ctx = myGameArea.context;
+    if (this.type == "text") {
+      ctx.font = this.width + " " + this.height;
+      ctx.fillStyle = color;
+      ctx.fillText(this.text, this.x, this.y);
+    } else {
+      ctx.fillStyle = color;
+      ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+  }
+...
+}

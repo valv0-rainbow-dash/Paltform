@@ -4,16 +4,16 @@ let config = {
     maxYVel: 25,
     blockSize: 50,
     camera: true,
-    cameraFriction: 5
+    cameraFriction: 100
   },
   player: {
     width: 40,
     height: 80,
     jumpForce: 0.15,
-    speed: 7,
+    speed: 20,
     acceleration: 0.5,
     decceleration: 5,
-    dashTime: 5,
+    dashTime: 0,
     actions: ["wall jump", "dash"],
   },
 }

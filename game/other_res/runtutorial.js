@@ -3,8 +3,8 @@ const configLevel = () => {
   World.clear(engine.world);
   Engine.clear(engine);
   bodies = [];
-  for (let y in levels[level].bitmap) {
-    let row = levels[level].bitmap[y];
+  for (let y in levelstuto[level].bitmap) {
+    let row = levelstuto[level].bitmap[y];
     for (let x in row) {
       let char = row[x];
       if (char !== " ") {
@@ -44,7 +44,7 @@ function draw() {
     background(200);
     textFont("Impact", 25);
     textAlign(CENTER, CENTER);
-    text("Paltform version 0.1.9.5a\nThe game is still in devloppement. Some levels can be in debug mode\n resolution: 1080 x 720\n\nWASD/Arrow - Move\nSpace/W/Up arrow - Jump/Walljump\nSHIFT + Mouvement - make a dash\n\nClick here to begin.", width/2, height/2);
+    text("Paltform tutorial\n resolution: 1080 x 720\n\nClick here to begin.", width/2, height/2);
     if(mouseIsPressed){
       scene = "game";
     }
@@ -65,16 +65,16 @@ function draw() {
 
     pop();
 
-    if(levels[level].message){
+    if(levelstuto[level].message){
       textFont("Impact", 25);
       fill(0, textFade);
       textAlign(CENTER, CENTER);
-      text(levels[level].message, width/2 - 2, height/2 - 2);
-      text(levels[level].message, width/2 - 2, height/2 + 2);
-      text(levels[level].message, width/2 + 2, height/2 - 2);
-      text(levels[level].message, width/2 + 2, height/2 + 2);
+      text(levelstuto[level].message, width/2 - 2, height/2 - 2);
+      text(levelstuto[level].message, width/2 - 2, height/2 + 2);
+      text(levelstuto[level].message, width/2 + 2, height/2 - 2);
+      text(levelstuto[level].message, width/2 + 2, height/2 + 2);
       fill(255, textFade);
-      text(levels[level].message, width/2, height/2);
+      text(levelstuto[level].message, width/2, height/2);
       if(textFade > 0){
         textFade -= 1;
       }
@@ -98,7 +98,7 @@ textFont("Impact", 25);
     }
 
     if (nextLevel) {
-      if (levels[level + 1]) {
+      if (levelstuto[level + 1]) {
         level++;
         configLevel();
         nextLevel = false;
@@ -112,7 +112,7 @@ textFont("Impact", 25);
     textFont("Impact", 25);
     textAlign(CENTER, CENTER);
     fill(0);
-    text("You win!", width/2, height/2);
+    text("You complete the tutorial!\n now let's add some challenge..\n retourn to the menu and choose your resolution", width/2, height/2);
   }
 }
 

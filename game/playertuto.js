@@ -176,7 +176,7 @@ class Player extends Body {
     }
 
     // Dying
-    if(this.body.position.y > (levels[level].bitmap.length * config.world.blockSize) + 500) {
+    if(this.body.position.y > (levelstuto[level].bitmap.length * config.world.blockSize) + 500) {
       plusOne(count)
       this.died = true;
     }
