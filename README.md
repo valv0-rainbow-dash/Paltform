@@ -2,27 +2,15 @@
 
 ![alt-text](https://i.imgur.com/hrfgoIn.png)
 
-Paltform is a html and js platform game. 
+Paltform is a html and js platform game online created by Valv0 rainbowdash and betawolfy. It is a platform game that is designed to be played on a computer. the principe is simple, if you fall, you're teleported to the beginning of the level, so you can retry. there is no life, no game over, only victory.
 
-## actual version: 0.1.4a
+## actual version: 0.1.9.6a
 
 ## Usage
 
-You can test the game [here](https://UnusualPaltformGame.valv0fluttershy.repl.co).
+You can test the game [here](paltform.tk).
 
 the game is the same version for both player and devlopper. You can see new levels before it be commit.
-
-## Changelog:
-
-### CHANGELOGS ARE MOVING TO THE MAIN PAGE!!
-
-### v0.1.4a
-- adding first levels of the Glitchy world
-  - a completly gliched world.
-- tranlation in english in progress.
-
-### v0.1a
-- Initial publish
 
 
 ## Contributing
